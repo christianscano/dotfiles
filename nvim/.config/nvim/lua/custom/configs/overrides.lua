@@ -37,6 +37,17 @@ M.mason = {
     -- c/cpp stuff
     "clangd",
     "clang-format",
+
+    -- programming lsp
+    "rust-analyzer",
+    "bash-language-server",
+    "elixir-ls",
+    "docker-compose-language-service",
+    "dockerfile-language-server",
+    "python-lsp-server",
+
+    -- webservers lsp
+    "nginx-language-server",
   },
 }
 

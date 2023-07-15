@@ -4,7 +4,6 @@ local overrides = require("custom.configs.overrides")
 local plugins = {
 
   -- Override plugin definition options
-
   {
     "neovim/nvim-lspconfig",
     dependencies = {
@@ -47,6 +46,33 @@ local plugins = {
     end,
   },
 
+  {
+	  "linux-cultist/venv-selector.nvim",
+	  dependencies = {
+      "neovim/nvim-lspconfig",
+      "nvim-telescope/telescope.nvim"
+    },
+	  config = true,
+	  event = "VeryLazy", -- Optional: needed only if you want to type `:VenvSelect` without a keymapping
+  },
+
+  {
+    "neovim/nvim-lspconfig",
+    -- BufRead is to make sure if you do nvim some_file then this is still going to be loaded
+    event = { "VeryLazy", "BufRead" },
+    config = function() end, -- Override to make sure load order is correct
+    dependencies = {
+      {
+        "williamboman/mason.nvim",
+        config = function(plugin, opts)
+          require("configs.mason-lspconfig").setup(plugin, opts)
+        end,
+      },
+      "williamboman/mason-lspconfig",
+      -- TODO: Add mason-null-ls? mason-dap?
+    }
+  },
+
   -- To make a plugin not be loaded
   -- {
   --   "NvChad/nvim-colorizer.lua",
@@ -62,8 +88,7 @@ local plugins = {
   -- }
 
   -- To use a extras plugin
-  -- { import = "custom.configs.extras.symbols-outline", },
-  { import = "custom.configs.extras.mason-extras", },
+  { import = "custom.configs.extras.diffview", },
 }
 
 return plugins

@@ -1,5 +1,6 @@
 return {
-  disabled = {
-    "rust_analyzer",
-  },
+	disabled = {
+		"rust_analyzer",
+		"elixirls",
+	},
 }

@@ -22,6 +22,9 @@ return {
 			}),
 			null_ls.builtins.diagnostics.shellcheck,
 
+			-- docker linter
+			null_ls.builtins.diagnostics.hadolint,
+
 			-- It has been disabled since required `luarocks` in
 			-- the local enviroment.
 			--null_ls.builtins.diagnostics.luacheck,

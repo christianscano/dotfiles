@@ -1,37 +1,40 @@
 -- use mason-lspconfig to configure LSP installations
 return {
-  "williamboman/mason-lspconfig.nvim",
-  opts = {
-    automatic_installation = true,
-    ensure_installed = {
-      -- linux stuff
-      "bashls",
-      "nginx_language_server",
-      "docker_compose_language_service",
-      "dockerls",
+	"williamboman/mason-lspconfig.nvim",
+	opts = {
+		automatic_installation = true,
+		ensure_installed = {
+			-- linux stuff
+			"bashls",
+			"nginx_language_server",
+			"docker_compose_language_service",
+			"dockerls",
 
-      -- lua stuff
-      "lua_ls",
+			-- lua stuff
+			"lua_ls",
 
-      -- rust stuff
-      "rust_analyzer",
+			-- rust stuff
+			"rust_analyzer",
 
-      -- python stuff
-      "pylsp",
-      "pyright",
+			-- elixir stuff
+			"elixirls",
 
-      -- c/c++ stuff
-      "clangd",
+			-- python stuff
+			"pylsp",
+			"pyright",
 
-      -- web stuff
-      "cssls",
-      "html",
-      "marksman",
-      "tsserver",
+			-- c/c++ stuff
+			"clangd",
 
-      -- file stuff
-      "jsonls",
-      "yamlls",
-    },
-  },
+			-- web stuff
+			"cssls",
+			"html",
+			"marksman",
+			"tsserver",
+
+			-- file stuff
+			"jsonls",
+			"yamlls",
+		},
+	},
 }

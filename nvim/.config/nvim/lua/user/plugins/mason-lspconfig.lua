@@ -6,7 +6,7 @@ return {
 		ensure_installed = {
 			-- linux stuff
 			"bashls",
-			"nginx_language_server",
+			-- "nginx_language_server",
 			"docker_compose_language_service",
 			"dockerls",
 

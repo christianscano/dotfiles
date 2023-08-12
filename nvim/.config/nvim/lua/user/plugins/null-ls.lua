@@ -11,7 +11,9 @@ return {
 			-- python formatter/linter
 			null_ls.builtins.formatting.black,
 			null_ls.builtins.formatting.isort,
-			null_ls.builtins.diagnostics.flake8,
+			-- null_ls.builtins.diagnostics.flake8.with({
+			-- 	extra_args = { "--extend-ignore=", "E501,E266,E722" },
+			-- }),
 
 			-- c/c++ formatter
 			null_ls.builtins.formatting.clang_format,

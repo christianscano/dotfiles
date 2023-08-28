@@ -1,6 +1,6 @@
 return {
 	-- You can disable default plugins as follows:
-	{ "goolord/alpha-nvim",           enabled = false },
+	-- { "goolord/alpha-nvim",           enabled = false },
 	{ "max397574/better-escape.nvim", enabled = false },
 	-- You can also add new plugins here as well:
 	{ "lvimuser/lsp-inlayhints.nvim", enabled = false },
@@ -33,8 +33,8 @@ return {
 				-- comment the lines to not apply the options
 				options = {
 					enabled = true,
-					ruler = false,            -- disables the ruler text in the cmd line area
-					showcmd = false,          -- disables the command in the last line of the screen
+					ruler = false, -- disables the ruler text in the cmd line area
+					showcmd = false, -- disables the command in the last line of the screen
 				},
 				twilight = { enabled = true }, -- enable to start Twilight when zen mode opens
 				gitsigns = { enabled = false }, -- disables git signs

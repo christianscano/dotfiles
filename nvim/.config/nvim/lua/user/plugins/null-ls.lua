@@ -16,7 +16,7 @@ return {
 			-- }),
 
 			-- c/c++ formatter
-			null_ls.builtins.formatting.clang_format,
+			-- null_ls.builtins.formatting.clang_format,
 
 			-- bash stuff
 			null_ls.builtins.formatting.shfmt.with({

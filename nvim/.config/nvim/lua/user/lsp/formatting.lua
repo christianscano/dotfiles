@@ -4,5 +4,6 @@ return {
 		"elixirls",
 		"pylsp",
 		"pyright",
+		"clangd",
 	},
 }

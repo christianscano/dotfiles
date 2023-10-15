@@ -110,6 +110,15 @@ source $ZSH/oh-my-zsh.sh
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
+
+###########################################################
+####################### MY CONFIG #########################
+###########################################################
+
+alias pwninit='pwninit --template-path ~/.config/pwninit/pwninit-template.py'
+
+export PATH=~/bin:$PATH
+
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('/home/darkknight/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
@@ -124,15 +133,3 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
-
-
-###########################################################
-####################### MY CONFIG #########################
-###########################################################
-alias pwninit='pwninit --template-path ~/.config/pwninit/pwninit-template.py'
-export PATH=~/bin:$PATH
-
-# >>>> Vagrant command completion (start)
-fpath=(/opt/vagrant/embedded/gems/gems/vagrant-2.3.7/contrib/zsh $fpath)
-compinit
-# <<<<  Vagrant command completion (end)

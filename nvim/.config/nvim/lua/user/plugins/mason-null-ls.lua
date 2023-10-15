@@ -4,7 +4,7 @@ return {
 		automatic_installation = true,
 		ensure_installed = {
 			"black",
-			"clang-format",
+			-- "clang-format",
 			"isort",
 			"prettier",
 			"shfmt",

@@ -3,9 +3,9 @@ return {
 	opts = {
 		automatic_installation = true,
 		ensure_installed = {
-			"black",
+			-- "black",
 			-- "clang-format",
-			"isort",
+			-- "isort",
 			"prettier",
 			"shfmt",
 			"stylua",

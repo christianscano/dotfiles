@@ -3,7 +3,6 @@ return {
 		"rust_analyzer",
 		"elixirls",
 		"pylsp",
-		"pyright",
 		"clangd",
 	},
 }

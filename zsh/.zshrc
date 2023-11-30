@@ -115,8 +115,10 @@ source $ZSH/oh-my-zsh.sh
 ####################### MY CONFIG #########################
 ###########################################################
 
+# pwninit alias with template
 alias pwninit='pwninit --template-path ~/.config/pwninit/pwninit-template.py'
 
+# go binaries export
 export PATH=~/bin:$PATH
 
 # >>> conda initialize >>>

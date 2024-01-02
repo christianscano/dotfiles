@@ -115,19 +115,19 @@ source $ZSH/oh-my-zsh.sh
 #                       MY CONFIG                         #
 ###########################################################
 
-##############################
-# pwninit alias with template
-##############################
+###############################
+# pwninit alias with template #
+###############################
 alias pwninit='pwninit --template-path ~/.config/pwninit/pwninit-template.py'
 
-#####################
-# GO binaries export
-#####################
+######################
+# GO binaries export #
+######################
 export PATH=~/bin:$PATH
 
-#######################
-# Conda Initialization
-#######################
+########################
+# Conda Initialization #
+########################
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('/home/darkknight/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
@@ -143,8 +143,8 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
-###############
-# TMUX Startup
-###############
+################
+# TMUX Startup #
+################
 ZSH_TMUX_AUTOSTART=true
 source $ZSH/oh-my-zsh.sh

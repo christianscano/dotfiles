@@ -19,8 +19,8 @@ return {
 		["<space>k"] = { ":TSHighlightCapturesUnderCursor<cr>", desc = "View Highlight Group" },
 
 		-- Easy splits
-		["\\"] = { "<cmd>split<cr>", desc = "Horizontal split" },
-		["|"] = { "<cmd>vsplit<cr>", desc = "Vertical split" },
+		-- ["\\"] = { "<cmd>split<cr>", desc = "Horizontal split" },
+		-- ["|"] = { "<cmd>vsplit<cr>", desc = "Vertical split" },
 
 		-- Search highlight groups
 		["<space>sg"] = { "<cmd>Telescope highlights<cr>", desc = "Highlight groups" },

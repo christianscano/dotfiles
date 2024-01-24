@@ -1,7 +1,10 @@
 return {
-  settings = {
-    Lua = {
-      hint = { enable = true },
-    },
-  },
+	settings = {
+		Lua = {
+			hint = { enable = true },
+			format = {
+				enable = false,
+			},
+		},
+	},
 }

@@ -1,20 +1,24 @@
+-- return {
+-- 	{
+-- 		"zbirenbaum/copilot.lua",
+-- 		cmd = "Copilot",
+-- 		event = "InsertEnter",
+-- 		config = function()
+-- 			require("copilot").setup({
+-- 				suggestion = { enabled = true },
+-- 				panel = { enabled = true },
+-- 			})
+-- 		end,
+-- 	},
+--
+-- 	{
+-- 		"zbirenbaum/copilot-cmp",
+-- 		config = function()
+-- 			require("copilot_cmp").setup()
+-- 		end,
+-- 	},
+-- }
 return {
-	{
-		"zbirenbaum/copilot.lua",
-		cmd = "Copilot",
-		event = "InsertEnter",
-		config = function()
-			require("copilot").setup({
-				suggestion = { enabled = false },
-				panel = { enabled = false },
-			})
-		end,
-	},
-
-	{
-		"zbirenbaum/copilot-cmp",
-		config = function()
-			require("copilot_cmp").setup()
-		end,
-	},
+	{ import = "astrocommunity.completion.copilot-lua" },
+	{ import = "astrocommunity.completion.copilot-lua-cmp" },
 }

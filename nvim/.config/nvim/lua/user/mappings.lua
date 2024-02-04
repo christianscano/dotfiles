@@ -18,12 +18,12 @@ return {
 		-- View treesitter highlight groups
 		["<space>k"] = { ":TSHighlightCapturesUnderCursor<cr>", desc = "View Highlight Group" },
 
-		-- Easy splits
-		-- ["\\"] = { "<cmd>split<cr>", desc = "Horizontal split" },
-		-- ["|"] = { "<cmd>vsplit<cr>", desc = "Vertical split" },
+		-- Unbinding Easy splits
+		["\\"] = false,
+		["|"] = false,
 
-		-- Search highlight groups
-		["<space>sg"] = { "<cmd>Telescope highlights<cr>", desc = "Highlight groups" },
+		-- -- Search highlight groups
+		-- ["<space>sg"] = { "<cmd>Telescope highlights<cr>", desc = "Highlight groups" },
 
 		-- quick save
 		["<C-s>"] = { ":w!<cr>", desc = "Save File" },
@@ -44,9 +44,5 @@ return {
 			end,
 			desc = "Previous buffer",
 		},
-	},
-	t = {
-		-- setting a mapping to false will disable it
-		-- ["<esc>"] = false,
 	},
 }

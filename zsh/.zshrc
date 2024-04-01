@@ -115,6 +115,16 @@ source $ZSH/oh-my-zsh.sh
 #                       MY CONFIG                         #
 ###########################################################
 
+########
+# Alias
+########
+alias gouni='cd ~/Documents/University/master_degree/'
+
+##############
+# ModSecurity
+##############
+export LD_LIBRARY_PATH=/usr/local/modsecurity/lib
+
 ###############################
 # pwninit alias with template #
 ###############################
@@ -146,5 +156,5 @@ unset __conda_setup
 ################
 # TMUX Startup #
 ################
-ZSH_TMUX_AUTOSTART=true
+ZSH_TMUX_AUTOSTART=false
 source $ZSH/oh-my-zsh.sh

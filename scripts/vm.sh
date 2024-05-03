@@ -12,17 +12,17 @@ if [ -f ~/private/win11-credentials.sh ]; then
   echo "Credential file exists. Using the file."
   source ~/private/win11-credentials.sh
 else
-  win11user="DarkKnight"
-  win11pass="Chinatsu.36"
+  win11user=""
+  win11pass=""
   vmip="192.168.124.6"
 fi
 
-tmp=$(virsh --connect qemu:///system list | grep " win11 " | awk '{ print $3}')
+tmp=$(virsh --connect qemu:///system list | grep " win11-gpu " | awk '{ print $3}')
 
 if [ "$tmp" == "x" ] || [ "$tmp" != "xrunning" ]; then
   echo "Virtual Machine win11 is starting now... Waiting 30s before starting xfreerdp."
   notify-send "Virtual Machine win11 is starting now..." "Waiting 30s before starting xfreerdp."
-  virsh --connect qemu:///system start win11
+  virsh --connect qemu:///system start win11-gpu
   sleep 30
 else
   notify-send "Virtual Machine win11 is already running." "Launching xfreerdp now!"

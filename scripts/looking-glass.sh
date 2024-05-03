@@ -11,7 +11,7 @@
 tmp=$(virsh --connect qemu:///system list | grep " win11-gpu " | awk '{ print $3}')
 
 if [ "$tmp" == "x" ] || [ "$tmp" != "xrunning" ]; then
-  virsh --connect qemu:///system start win11
+  virsh --connect qemu:///system start win11-gpu
   echo "Virtual Machine win11 is starting..."
   sleep 3
 fi

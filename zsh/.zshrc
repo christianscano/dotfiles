@@ -118,14 +118,14 @@ source $ZSH/oh-my-zsh.sh
 ########
 # Alias
 ########
-alias gouni='cd ~/Documents/University/master_degree/'
+#alias gouni='cd ~/Documents/University/master_degree/'
 alias vol3='python3 ~/tools/volatility3/vol.py'
 alias vol2='~/tools/volatility2/volatility2'
 
 ##############
 # ModSecurity
 ##############
-export LD_LIBRARY_PATH=/usr/local/modsecurity/lib
+#export LD_LIBRARY_PATH=/usr/local/modsecurity/lib
 
 ###############################
 # pwninit alias with template #

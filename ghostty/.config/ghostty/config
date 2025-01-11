@@ -1,0 +1,21 @@
+theme = Dark+
+
+font-size          = 14
+font-family        = Hack Nerd Font
+font-thicken       = false
+adjust-cell-width  = -7%
+adjust-cell-height = 1
+
+cursor-style               = block
+cursor-style-blink         = false
+shell-integration-features = no-cursor
+
+mouse-hide-while-typing = true
+macos-option-as-alt     = left
+copy-on-select          = true
+
+window-decoration      = true
+macos-titlebar-style   = hidden
+window-padding-y       = 7
+window-padding-x       = 12
+window-padding-balance = true

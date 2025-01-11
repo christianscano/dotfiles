@@ -1,0 +1,30 @@
+theme = "sonokai"
+
+[editor]
+bufferline  = "always"
+text-width  = 300
+# rulers      = [80]
+line-number = "relative"
+auto-save   = true
+
+[editor.whitespace.render]
+newline = "none"
+nbsp    = "all"
+space   = "none"
+tab     = "none"
+
+[editor.statusline]
+left = ["mode", "spacer", "version-control" ,"spinner", "read-only-indicator", "file-modification-indicator"]
+mode.normal = "NORMAL"
+mode.insert = "INSERT"
+mode.select = "SELECT"
+
+[editor.indent-guides]
+render = true
+
+[editor.soft-wrap]
+enable = true
+wrap-at-text-width = true
+
+[editor.cursor-shape]
+insert = "bar"

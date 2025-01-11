@@ -1,0 +1,14 @@
+[language-server.ruff-lsp]
+command = "ruff-lsp"
+
+[language-server.lua-lsp]
+command = "lua-language-server"
+
+[[language]]
+name = "python"
+language-servers = [ "ruff-lsp" ]
+
+[[language]]
+name = "lua"
+language-servers = ["lua-lsp"]
+auto-format = true

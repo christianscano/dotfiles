@@ -118,24 +118,13 @@ source $ZSH/oh-my-zsh.sh
 ########
 # Alias
 ########
-#alias gouni='cd ~/Documents/University/master_degree/'
 alias vol3='python3 ~/tools/volatility3/vol.py'
 alias vol2='~/tools/volatility2/volatility2'
-
-##############
-# ModSecurity
-##############
-#export LD_LIBRARY_PATH=/usr/local/modsecurity/lib
 
 ###############################
 # pwninit alias with template #
 ###############################
 alias pwninit='pwninit --template-path ~/.config/pwninit/pwninit-template.py'
-
-######################
-# GO binaries export #
-######################
-export PATH=~/go/bin:$PATH
 
 ########################
 # Conda Initialization #

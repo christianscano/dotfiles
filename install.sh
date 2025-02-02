@@ -49,6 +49,9 @@ defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 defaults write com.apple.finder DisableAllAnimations -bool true
 defaults write com.apple.finder ShowPathbar -bool true
 
+# Mission Control
+defaults write com.apple.dock "mru-spaces" -bool "false"
+
 # Screenshot
 defaults write com.apple.screencapture location -string "${HOME}/Downloads"
 
@@ -56,7 +59,7 @@ defaults write com.apple.screencapture location -string "${HOME}/Downloads"
 killall Dock
 killall Finder
 
-#
+# Yabai User
 echo "$(whoami) ALL=(root) NOPASSWD: sha256:$(shasum -a 256 $(which yabai) | cut -d " " -f 1) $(which yabai) --load-sa" | sudo tee /private/etc/sudoers.d/yabai
 
 

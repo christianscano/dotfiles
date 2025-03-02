@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/zsh
 
 win=$(yabai -m query --windows --window first | jq '.id')
 

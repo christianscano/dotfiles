@@ -1,0 +1,275 @@
+tap "asmvik/formulae"
+tap "felixkratz/formulae"
+tap "gromgit/fuse"
+tap "koekeishiya/formulae"
+tap "messense/macos-cross-toolchains"
+tap "nikitabobko/tap"
+tap "playcover/playcover"
+tap "rokartur/betteraudio"
+tap "tw93/tap"
+# Swiss-army knife for Android testing and development
+brew "adb-enhanced"
+# Development kit for the Java programming language
+brew "openjdk"
+# Tool for reverse engineering 3rd party, closed, binary Android apps
+brew "apktool"
+# Perf monitoring CLI tool for Apple Silicon
+brew "asitop"
+# Official Amazon AWS command-line interface
+brew "awscli"
+# Get/set bluetooth power and discoverable state
+brew "blueutil"
+# Resource monitor. C++ version and continuation of bashtop and bpytop
+brew "btop"
+# Cross-platform make
+brew "cmake"
+# Get a file from an HTTP, HTTPS or FTP server
+brew "curl", args: ["HEAD"]
+# Tool for exploring each layer in a docker image
+brew "dive"
+# DjVu viewer
+brew "djvulibre"
+# Disk Usage/Free Utility - a better 'df' alternative
+brew "duf"
+# Perl lib for reading and writing EXIF metadata
+brew "exiftool"
+# Fast, simple, recursive content discovery tool written in Rust
+brew "feroxbuster"
+# Fast web fuzzer written in Go
+brew "ffuf"
+# Command-line fuzzy finder written in Go
+brew "fzf"
+# GNU compiler collection
+brew "gcc"
+# GitHub command-line tool
+brew "gh"
+# Interpreter for PostScript and PDF
+brew "ghostscript"
+# Graph visualization software from AT&T and Bell Labs
+brew "graphviz"
+# GNU grep, egrep and fgrep
+brew "grep"
+# Development framework for multimedia applications
+brew "gstreamer"
+# Smarter Dockerfile linter to validate best practices
+brew "hadolint"
+# Post-modern modal text editor
+brew "helix"
+# Tool to report network interface bandwidth
+brew "ifstat"
+# Update of iperf: measures TCP, UDP, and SCTP bandwidth
+brew "iperf3"
+# CLI wrapper for basic network utilities on macOS - ip command
+brew "iproute2mac"
+# Dex to Java decompiler
+brew "jadx"
+# Kubernetes command-line interface
+brew "kubernetes-cli"
+# Sophisticated file transfer program
+brew "lftp"
+# LLVM's OpenMP runtime library
+brew "libomp"
+# Clone of ls with colorful output, file type icons, and more
+brew "lsd"
+# Powerful, lightweight programming language
+brew "lua"
+# Language Server for the Lua language
+brew "lua-language-server"
+# Apple Silicon Monitor Top written in Go Lang
+brew "mactop"
+# Mac App Store command-line interface
+brew "mas"
+# Open-source, cross-platform JavaScript runtime environment
+brew "node"
+# Visual testing tool for MCP servers
+brew "mcp-inspector"
+# NCurses Disk Usage
+brew "ncdu"
+# Ambitious Vim-fork focused on extensibility and agility
+brew "neovim"
+# Port scanning utility for large networks
+brew "nmap"
+# Retrieves currently playing media, and simulates media actions
+brew "nowplaying-cli"
+# General-purpose scripting language
+brew "php"
+# Fast, disk space efficient package manager
+brew "pnpm"
+# Generic machine emulator and virtualizer
+brew "qemu"
+# Rsync for cloud storage
+brew "rclone"
+# Search tool like grep and The Silver Searcher
+brew "ripgrep"
+# Powerful, clean, object-oriented scripting language
+brew "ruby"
+# Safe, concurrent, practical language
+brew "rust"
+# Scan for misconfigured S3 buckets across S3-compatible APIs!
+brew "s3scanner"
+# Autoformat shell script source code
+brew "shfmt"
+# SOcket CAT: netcat on steroids
+brew "socat"
+# Penetration testing for SQL injection and database servers
+brew "sqlmap"
+# Organize software neatly under a single directory tree (e.g. /usr/local)
+brew "stow"
+# Change macOS audio source from the command-line
+brew "switchaudio-osx"
+# Terminal multiplexer
+brew "tmux"
+# Language Server Protocol implementation for TypeScript wrapping tsserver
+brew "typescript-language-server"
+# Extremely fast Python package installer and resolver, written in Rust
+brew "uv"
+# Sends magic packets to wake up network-devices
+brew "wakeonlan"
+# Executes a program periodically, showing output fullscreen
+brew "watch"
+# Internet file retriever
+brew "wget"
+# Tools for the WireGuard secure network tunnel
+brew "wireguard-tools"
+# JavaScript package manager
+brew "yarn"
+# A tiling window manager for macOS based on binary space partitioning.
+brew "asmvik/formulae/yabai"
+# A window border system for macOS
+brew "felixkratz/formulae/borders"
+# Read-write NTFS driver for FUSE
+brew "gromgit/fuse/ntfs-3g-mac"
+# Simple hotkey-daemon for macOS.
+brew "koekeishiya/formulae/skhd"
+# aarch64-unknown-linux-gnu Toolchain
+brew "messense/macos-cross-toolchains/aarch64-unknown-linux-gnu"
+# Comprehensive macOS cleanup and application uninstall tool
+brew "tw93/tap/mole"
+# Android SDK component
+cask "android-platform-tools"
+# Master your Mac's audio with per-app volume control and precise device management
+cask "rokartur/betteraudio/betteraudio"
+# Anthropic's official Claude AI desktop app
+cask "claude"
+# Server and cloud storage browser
+cask "cyberduck"
+cask "font-fira-code"
+cask "font-hack-nerd-font"
+cask "font-jetbrains-mono"
+cask "font-sf-mono"
+cask "font-sf-pro"
+# Set of tools to manage resources and applications hosted on Google Cloud
+cask "gcloud-cli"
+# Software reverse engineering (SRE) suite of tools
+cask "ghidra"
+# Terminal emulator that uses platform-native UI and GPU acceleration
+cask "ghostty"
+# Web browser
+cask "google-chrome"
+# Software for Logitech devices
+cask "logi-options+"
+# File system integration
+cask "macfuse"
+# Provides updates to various Microsoft products
+cask "microsoft-auto-update"
+# Meet, chat, call, and collaborate in just one place
+cask "microsoft-teams"
+# GameStream client
+cask "moonlight"
+# Re-mounts write-protected NTFS volumes
+cask "mounty"
+# Reverse proxy, secure introspectable tunnels to localhost
+cask "ngrok"
+# Finder Toolbar app to open the current directory in Terminal or Editor
+cask "openinterminal"
+# Android file transfer
+cask "openmtp"
+# Utility to uninstall apps and remove leftover files from old/uninstalled apps
+cask "pearcleaner"
+# Sideload iOS apps and games
+cask "playcover/playcover/playcover-community"
+# Collaboration platform for API development
+cask "postman"
+# Tool that provides consistent, highly configurable symbols for apps
+cask "sf-symbols"
+# App that enables mouse-free UI interaction
+cask "shortcat"
+# System monitor for the menu bar
+cask "stats"
+# Video game digital distribution service
+cask "steam"
+# Messaging app with a focus on speed and security
+cask "telegram"
+# Multimedia player
+cask "vlc"
+# Network protocol analyzer
+cask "wireshark-app"
+mas "Amphetamine", id: 937984704
+mas "Bitwarden", id: 1352778147
+mas "Blackmagic Disk Speed Test", id: 425264550
+mas "Goodnotes", id: 1444383602
+mas "Microsoft Excel", id: 462058435
+mas "Microsoft PowerPoint", id: 462062816
+mas "Microsoft Word", id: 462054704
+mas "The Unarchiver", id: 425424353
+mas "Todoist", id: 585829637
+mas "WhatsApp", id: 310633997
+mas "Windows App", id: 1295203466
+mas "WireGuard", id: 1451685025
+vscode "antfu.slidev"
+vscode "antfu.unocss"
+vscode "aykutsarac.jsoncrack-vscode"
+vscode "charliermarsh.ruff"
+vscode "davidanson.vscode-markdownlint"
+vscode "docker.docker"
+vscode "dustypomerleau.rust-syntax"
+vscode "eamodio.gitlens"
+vscode "editorconfig.editorconfig"
+vscode "esbenp.prettier-vscode"
+vscode "exiasr.hadolint"
+vscode "fill-labs.dependi"
+vscode "github.codespaces"
+vscode "github.copilot-chat"
+vscode "gruntfuggly.todo-tree"
+vscode "james-yu.latex-workshop"
+vscode "mads-hartmann.bash-ide-vscode"
+vscode "mechatroner.rainbow-csv"
+vscode "mhutchie.git-graph"
+vscode "mkhl.shfmt"
+vscode "ms-azuretools.vscode-containers"
+vscode "ms-azuretools.vscode-docker"
+vscode "ms-ceintl.vscode-language-pack-it"
+vscode "ms-python.debugpy"
+vscode "ms-python.python"
+vscode "ms-python.vscode-pylance"
+vscode "ms-python.vscode-python-envs"
+vscode "ms-toolsai.jupyter"
+vscode "ms-toolsai.jupyter-keymap"
+vscode "ms-toolsai.jupyter-renderers"
+vscode "ms-toolsai.vscode-jupyter-cell-tags"
+vscode "ms-toolsai.vscode-jupyter-slideshow"
+vscode "ms-vscode-remote.remote-containers"
+vscode "ms-vscode-remote.remote-ssh"
+vscode "ms-vscode-remote.remote-ssh-edit"
+vscode "ms-vscode.cpp-devtools"
+vscode "ms-vscode.cpptools"
+vscode "ms-vscode.cpptools-extension-pack"
+vscode "ms-vscode.cpptools-themes"
+vscode "ms-vscode.makefile-tools"
+vscode "ms-vscode.remote-explorer"
+vscode "ms-vscode.remote-server"
+vscode "ms-vsliveshare.vsliveshare"
+vscode "nstechbytes.html-view"
+vscode "openai.openai-chatgpt-adhoc"
+vscode "pkief.material-icon-theme"
+vscode "redhat.vscode-yaml"
+vscode "rust-lang.rust-analyzer"
+vscode "shardulm94.trailing-spaces"
+vscode "shd101wyy.markdown-preview-enhanced"
+vscode "sumneko.lua"
+vscode "tamasfe.even-better-toml"
+vscode "tomoki1207.pdf"
+vscode "vadimcn.vscode-lldb"
+vscode "wayou.vscode-todo-highlight"
+vscode "wscats.cors-browser"
+vscode "zoellner.openapi-preview"

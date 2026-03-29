@@ -1,0 +1,11 @@
+# Mole Whitelist - Protected paths won't be deleted
+# Default protections: Playwright browsers, HuggingFace models, Maven repo, Ollama models, Surge Mac, R renv, Finder metadata
+# Add one pattern per line to keep items safe.
+
+~/Library/Caches/Firefox/*
+~/.Trash
+/Users/darkknight/.cache/huggingface*
+/Users/darkknight/Library/Caches/JetBrains*
+/Users/darkknight/Library/Caches/com.jetbrains.toolbox*
+/Users/darkknight/Library/Caches/com.apple.finder
+/Users/darkknight/Library/Mobile Documents*

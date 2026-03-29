@@ -1,8 +1,12 @@
-#!/bin/zsh
+#!/bin/sh
 
-# -----------------
+ROOT_DIR="$HOME/dotfiles"
+BREW_PACKAGES = "$ROOT_DIR/brew/Brewfile"
+SCRIPTS_DIR="$ROOT_DIR/scripts"
+
+# ------------------
 # General functions
-# -----------------
+# ------------------
 
 _seekConfirmation_() {
   # v1.0.0
@@ -17,49 +21,31 @@ _seekConfirmation_() {
   done
 }
 
-# Install xcode tools
-echo "Installing xcode tools..."
+
+# ------------
+# xcode tools
+# ------------
+
+echo "[+] Installing xcode tools..."
 xcode-select --install
 
+
+# ---------
 # Homebrew
-echo "Install Brew..."
+# ---------
+
+echo "[+] Install Brew..."
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 brew analytics off
 
-# --------------
+echo "[+] Install packages..."
+brew bundle --file $BREW_PACKAGES
+
+# ---------------
 # macOS settings
-# --------------
+# ---------------
+#
 echo "[+] MacOS Settings..."
-
-# Keyboard
-defaults write -g KeyRepeat -int 1
-defaults write -g InitialKeyRepeat -int 15
-
-# Dock
-defaults write com.apple.dock launchanim -bool false
-defaults write com.apple.dock show-recents -bool false
-defaults write com.apple.dock autohide -bool true
-defaults write com.apple.dock tilesize -int 38
-defaults write com.apple.dock orientation -string "left"
-
-# Finder
-defaults write -g AppleShowAllExtensions -bool true
-defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
-defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
-defaults write com.apple.finder DisableAllAnimations -bool true
-defaults write com.apple.finder ShowPathbar -bool true
-
-# Mission Control
-defaults write com.apple.dock "mru-spaces" -bool "false"
-
-# Screenshot
-defaults write com.apple.screencapture location -string "${HOME}/Downloads"
-
-# Restart applications
-killall Dock
-killall Finder
-
-# Yabai User
-echo "$(whoami) ALL=(root) NOPASSWD: sha256:$(shasum -a 256 $(which yabai) | cut -d " " -f 1) $(which yabai) --load-sa" | sudo tee /private/etc/sudoers.d/yabai
+zsh "$SCRIPTS_DIR/mac.sh"
 
 

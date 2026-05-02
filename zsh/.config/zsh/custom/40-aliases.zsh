@@ -1,6 +1,8 @@
-#----------
+# Aliases and custom commands
+
+# ----------
 # Commands
-# ---------
+# ----------
 
 alias lports='lsof -iTCP -sTCP:LISTEN -n -P'
 alias ls='eza -l --icons always'

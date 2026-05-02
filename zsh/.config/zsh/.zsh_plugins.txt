@@ -1,0 +1,18 @@
+# Antidote plugin bundle file
+# See: https://github.com/getantidote/antidote
+
+# Completion setup
+zsh-users/zsh-completions kind:fpath path:src
+
+# Plugin helpers
+romkatv/zsh-defer
+
+# Productivity & UI
+zsh-users/zsh-autosuggestions kind:defer
+zsh-users/zsh-history-substring-search
+unixorn/fzf-zsh-plugin kind:defer
+changyuheng/fz kind:defer
+
+# Prompt and highlighting
+romkatv/powerlevel10k
+zsh-users/zsh-syntax-highlighting kind:defer

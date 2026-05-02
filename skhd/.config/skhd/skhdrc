@@ -60,9 +60,9 @@ alt + shift - right : yabai -m window --swap east
 alt + shift - up    : yabai -m window --swap north
 
 
-# -----------------------------
+# ----------------------------
 # Wrapt window (DEFAULT MODE)
-# -----------------------------
+# ----------------------------
 
 alt + cmd - down  : yabai -m window --warp south
 alt + cmd - left  : yabai -m window --warp west
@@ -85,9 +85,9 @@ cmd - 8 : yabai -m space --focus 8
 cmd - 9 : yabai -m space --focus 9
 
 
-# -------------------------------------
+# ------------------------------------
 # Send window to space (DEFAULT MODE)
-# -------------------------------------
+# ------------------------------------
 
 alt + shift - 1 : yabai -m window --space 1
 alt + shift - 2 : yabai -m window --space 2
@@ -100,9 +100,9 @@ alt + shift - 8 : yabai -m window --space 8
 alt + shift - 9 : yabai -m window --space 9
 
 
-# ------------------------------------
+# --------------------------
 # Move space (DEFAULT MODE)
-# ------------------------------------
+# --------------------------
 
 alt + ctrl - 1 : yabai -m space --move 1
 alt + ctrl - 2 : yabai -m space --move 2
@@ -115,17 +115,17 @@ alt + ctrl - 8 : yabai -m space --move 8
 alt + ctrl - 9 : yabai -m space --move 9
 
 
-# -----------
+# -----
 # Apps
-# -----------
+# -----
 
 cmd + shift - s : yabai -m window --toggle spotify || open -a Spotify
 cmd + shift - t : yabai -m window --toggle terminal || open -a Ghostty
 
 
-# -------------------
+# -----------------
 # Others shortcuts
-# -------------------
+# -----------------
 
 alt - tab         : yabai -m space --switch recent
 alt + shift - tab : yabai -m space --focus recent

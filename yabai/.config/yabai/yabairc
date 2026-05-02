@@ -1,12 +1,12 @@
-#!/usr/bin/env sh
+#!/bin/sh
 
 yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
 sudo yabai --load-sa
 
 
-# ---------------------------
+# ----------------
 # Global settings
-# ---------------------------
+# ----------------
 
 yabai -m config external_bar                off:33:0\
                 \
@@ -48,13 +48,13 @@ yabai -m space 3 --label docs
 yabai -m space 4 --label browsers
 
 
-# ---------------------------
+# ------
 # Rules
-# ---------------------------
+# ------
 
 yabai -m rule --add app="^(System Settings|Clock|Calculator|Software Update|Time Machine|System Information|Finder)$" manage=off
 yabai -m rule --add app="^Raycast$" title="^Settings$" manage=off
-yabai -m rule --add app="^(DeepL|Ryujinx|Discord)$" manage=off
+yabai -m rule --add app="^(DeepL|Ryujinx)$" manage=off
 
 yabai -m rule --add app="^WhatsApp$" space=social
 yabai -m rule --add app="^Telegram$" space=social
@@ -70,9 +70,9 @@ yabai -m rule --add app="^Ghostty$" scratchpad=terminal grid=100:100:1:1:98:98
 yabai -m rule --apply
 
 
-# ---------------------------
+# --------
 # Signals
-# ---------------------------
+# --------
 
 # Add signal to make yabai focus the other window when I close one
 yabai -m signal --add event=window_destroyed action="yabai -m query --windows --window &> /dev/null || yabai -m window --focus recent || yabai -m window --focus first"
@@ -83,12 +83,5 @@ yabai -m signal --add event=space_changed action="nohup open -g raycast://extens
 # Ghostty signals
 yabai -m signal --add app='^Ghostty$' event=window_created action='yabai -m space --layout bsp'
 yabai -m signal --add app='^Ghostty$' event=window_destroyed action='yabai -m space --layout bsp'
-
-# Focus window after active space changes
-# yabai -m signal --add event=space_changed action="yabai -m window --focus \$(yabai -m query --windows --space | jq .[0].id)"
-
-# Focus window after active display changes
-# yabai -m signal --add event=display_changed action="yabai -m window --focus \$(yabai -m query --windows --space | jq .[0].id)"
-
 
 echo "Yabai configuration loaded…"

@@ -1,14 +1,21 @@
+tap "anomalyco/tap"
 tap "asmvik/formulae"
 tap "felixkratz/formulae"
 tap "gromgit/fuse"
+tap "hashicorp/tap"
 tap "koekeishiya/formulae"
 tap "messense/macos-cross-toolchains"
 tap "nikitabobko/tap"
 tap "playcover/playcover"
 tap "rokartur/betteraudio"
 tap "tw93/tap"
+tap "valkyrie00/bbrew"
 # Swiss-army knife for Android testing and development
 brew "adb-enhanced"
+# Automate deployment, configuration, and upgrading
+brew "ansible"
+# Plugin manager for zsh, inspired by antigen and antibody
+brew "antidote"
 # Development kit for the Java programming language
 brew "openjdk"
 # Tool for reverse engineering 3rd party, closed, binary Android apps
@@ -17,10 +24,12 @@ brew "apktool"
 brew "asitop"
 # Official Amazon AWS command-line interface
 brew "awscli"
+# Open-source, cross-platform JavaScript runtime environment
+brew "node"
+# Secure and free password manager for all of your devices
+brew "bitwarden-cli"
 # Get/set bluetooth power and discoverable state
 brew "blueutil"
-# Resource monitor. C++ version and continuation of bashtop and bpytop
-brew "btop"
 # Cross-platform make
 brew "cmake"
 # Get a file from an HTTP, HTTPS or FTP server
@@ -33,6 +42,10 @@ brew "djvulibre"
 brew "duf"
 # Perl lib for reading and writing EXIF metadata
 brew "exiftool"
+# Modern, maintained replacement for ls
+brew "eza"
+# Simple, fast and user-friendly alternative to find
+brew "fd"
 # Fast, simple, recursive content discovery tool written in Rust
 brew "feroxbuster"
 # Fast web fuzzer written in Go
@@ -63,6 +76,8 @@ brew "iperf3"
 brew "iproute2mac"
 # Dex to Java decompiler
 brew "jadx"
+# Handy way to save and run project-specific commands
+brew "just"
 # Kubernetes command-line interface
 brew "kubernetes-cli"
 # Sophisticated file transfer program
@@ -79,8 +94,6 @@ brew "lua-language-server"
 brew "mactop"
 # Mac App Store command-line interface
 brew "mas"
-# Open-source, cross-platform JavaScript runtime environment
-brew "node"
 # Visual testing tool for MCP servers
 brew "mcp-inspector"
 # NCurses Disk Usage
@@ -91,6 +104,8 @@ brew "neovim"
 brew "nmap"
 # Retrieves currently playing media, and simulates media actions
 brew "nowplaying-cli"
+# Drop-in replacement for Terraform. Infrastructure as Code Tool
+brew "opentofu"
 # General-purpose scripting language
 brew "php"
 # Fast, disk space efficient package manager
@@ -117,6 +132,10 @@ brew "sqlmap"
 brew "stow"
 # Change macOS audio source from the command-line
 brew "switchaudio-osx"
+# Free software distribution for the TeX typesetting system
+brew "texlive"
+# High-performance, platform-neutral implementation of VNC
+brew "tiger-vnc"
 # Terminal multiplexer
 brew "tmux"
 # Language Server Protocol implementation for TypeScript wrapping tsserver
@@ -133,24 +152,34 @@ brew "wget"
 brew "wireguard-tools"
 # JavaScript package manager
 brew "yarn"
+# The AI coding agent built for the terminal.
+brew "anomalyco/tap/opencode"
 # A tiling window manager for macOS based on binary space partitioning.
 brew "asmvik/formulae/yabai"
 # A window border system for macOS
 brew "felixkratz/formulae/borders"
 # Read-write NTFS driver for FUSE
 brew "gromgit/fuse/ntfs-3g-mac"
+# Packer
+brew "hashicorp/tap/packer"
 # Simple hotkey-daemon for macOS.
 brew "koekeishiya/formulae/skhd"
 # aarch64-unknown-linux-gnu Toolchain
 brew "messense/macos-cross-toolchains/aarch64-unknown-linux-gnu"
 # Comprehensive macOS cleanup and application uninstall tool
 brew "tw93/tap/mole"
+# Modern TUI for managing Homebrew packages and casks on macOS and Linux
+brew "valkyrie00/bbrew/bbrew"
 # Android SDK component
 cask "android-platform-tools"
 # Master your Mac's audio with per-app volume control and precise device management
 cask "rokartur/betteraudio/betteraudio"
-# Anthropic's official Claude AI desktop app
-cask "claude"
+# Desktop password and login vault
+cask "bitwarden"
+# OpenAI's official ChatGPT desktop app
+cask "chatgpt"
+# Terminal-based AI coding assistant
+cask "claude-code"
 # Server and cloud storage browser
 cask "cyberduck"
 cask "font-fira-code"
@@ -190,6 +219,8 @@ cask "pearcleaner"
 cask "playcover/playcover/playcover-community"
 # Collaboration platform for API development
 cask "postman"
+# VPN client focusing on security
+cask "protonvpn"
 # Tool that provides consistent, highly configurable symbols for apps
 cask "sf-symbols"
 # App that enables mouse-free UI interaction
@@ -200,12 +231,17 @@ cask "stats"
 cask "steam"
 # Messaging app with a focus on speed and security
 cask "telegram"
+# VPN client for secure internet access and private browsing
+cask "tunnelbear"
+# Virtual machines UI using QEMU
+cask "utm"
+# Open-source code editor
+cask "visual-studio-code"
 # Multimedia player
 cask "vlc"
 # Network protocol analyzer
 cask "wireshark-app"
 mas "Amphetamine", id: 937984704
-mas "Bitwarden", id: 1352778147
 mas "Blackmagic Disk Speed Test", id: 425264550
 mas "Goodnotes", id: 1444383602
 mas "Microsoft Excel", id: 462058435
@@ -229,7 +265,6 @@ vscode "esbenp.prettier-vscode"
 vscode "exiasr.hadolint"
 vscode "fill-labs.dependi"
 vscode "github.codespaces"
-vscode "github.copilot-chat"
 vscode "gruntfuggly.todo-tree"
 vscode "james-yu.latex-workshop"
 vscode "mads-hartmann.bash-ide-vscode"
@@ -260,7 +295,6 @@ vscode "ms-vscode.remote-explorer"
 vscode "ms-vscode.remote-server"
 vscode "ms-vsliveshare.vsliveshare"
 vscode "nstechbytes.html-view"
-vscode "openai.openai-chatgpt-adhoc"
 vscode "pkief.material-icon-theme"
 vscode "redhat.vscode-yaml"
 vscode "rust-lang.rust-analyzer"
@@ -269,7 +303,7 @@ vscode "shd101wyy.markdown-preview-enhanced"
 vscode "sumneko.lua"
 vscode "tamasfe.even-better-toml"
 vscode "tomoki1207.pdf"
-vscode "vadimcn.vscode-lldb"
 vscode "wayou.vscode-todo-highlight"
 vscode "wscats.cors-browser"
 vscode "zoellner.openapi-preview"
+uv "python-lsp-server"

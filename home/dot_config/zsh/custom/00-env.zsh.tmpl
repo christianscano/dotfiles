@@ -1,0 +1,10 @@
+# Environment and PATH configuration
+
+path=(
+	${HOMEBREW_PREFIX:+$HOMEBREW_PREFIX/opt/ruby/bin}
+	${HOMEBREW_PREFIX:+$HOMEBREW_PREFIX/opt/curl/bin}
+	"$HOME/.cargo/bin"
+	"$HOME/.local/bin"
+	$path
+)
+typeset -U path PATH

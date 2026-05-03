@@ -1,0 +1,37 @@
+# .zshrc - main Zsh configuration file
+
+zsh_plugins="${ZDOTDIR:-$HOME}/.zsh_plugins"
+brew_bin="{{ if eq .chezmoi.os "darwin" }}/opt/homebrew/bin/brew{{ else if eq .chezmoi.os "linux" }}/home/linuxbrew/.linuxbrew/bin/brew{{ end }}"
+
+if [[ ! -x "$brew_bin" ]]; then
+	print -u2 "Homebrew not found at expected path: $brew_bin"
+	return 1
+fi
+
+eval "$("$brew_bin" shellenv)"
+
+antidote_file="${HOMEBREW_PREFIX:-}/opt/antidote/share/antidote/antidote.zsh"
+
+if [[ ! -r "$antidote_file" ]]; then
+	print -u2 "antidote not found, install with Homebrew"
+	return 1
+fi
+
+source "$antidote_file"
+
+if [[ ! -r "${zsh_plugins}.txt" ]]; then
+	print -u2 "antidote plugins file not found: ${zsh_plugins}.txt"
+	return 1
+fi
+
+if [[ ! "${zsh_plugins}.zsh" -nt "${zsh_plugins}.txt" ]]; then
+	antidote bundle <"${zsh_plugins}.txt" >|"${zsh_plugins}.zsh"
+fi
+
+source "${zsh_plugins}.zsh"
+
+for config in "$ZDOTDIR"/custom/*.zsh(N); do
+	source "$config"
+done
+
+unset antidote_file brew_bin config zsh_plugins

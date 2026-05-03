@@ -1,0 +1,140 @@
+tap "anomalyco/tap"
+tap "hashicorp/tap"
+tap "valkyrie00/bbrew"
+
+# Swiss-army knife for Android testing and development
+brew "adb-enhanced"
+# Automate deployment, configuration, and upgrading
+brew "ansible"
+# Plugin manager for zsh, inspired by antigen and antibody
+brew "antidote"
+# Development kit for the Java programming language
+brew "openjdk"
+# Tool for reverse engineering 3rd party, closed, binary Android apps
+brew "apktool"
+# Official Amazon AWS command-line interface
+brew "awscli"
+# Open-source, cross-platform JavaScript runtime environment
+brew "node"
+# Secure and free password manager for all of your devices
+brew "bitwarden-cli"
+# Cross-platform make
+brew "cmake"
+# Get a file from an HTTP, HTTPS or FTP server
+brew "curl", args: ["HEAD"]
+# Tool for exploring each layer in a docker image
+brew "dive"
+# DjVu viewer
+brew "djvulibre"
+# Disk Usage/Free Utility - a better 'df' alternative
+brew "duf"
+# Perl lib for reading and writing EXIF metadata
+brew "exiftool"
+# Modern, maintained replacement for ls
+brew "eza"
+# Simple, fast and user-friendly alternative to find
+brew "fd"
+# Fast, simple, recursive content discovery tool written in Rust
+brew "feroxbuster"
+# Fast web fuzzer written in Go
+brew "ffuf"
+# Command-line fuzzy finder written in Go
+brew "fzf"
+# GNU compiler collection
+brew "gcc"
+# GitHub command-line tool
+brew "gh"
+# Interpreter for PostScript and PDF
+brew "ghostscript"
+# Graph visualization software from AT&T and Bell Labs
+brew "graphviz"
+# GNU grep, egrep and fgrep
+brew "grep"
+# Development framework for multimedia applications
+brew "gstreamer"
+# Smarter Dockerfile linter to validate best practices
+brew "hadolint"
+# Post-modern modal text editor
+brew "helix"
+# Tool to report network interface bandwidth
+brew "ifstat"
+# Update of iperf: measures TCP, UDP, and SCTP bandwidth
+brew "iperf3"
+# Dex to Java decompiler
+brew "jadx"
+# Handy way to save and run project-specific commands
+brew "just"
+# Kubernetes command-line interface
+brew "kubernetes-cli"
+# Sophisticated file transfer program
+brew "lftp"
+# LLVM's OpenMP runtime library
+brew "libomp"
+# Clone of ls with colorful output, file type icons, and more
+brew "lsd"
+# Powerful, lightweight programming language
+brew "lua"
+# Language Server for the Lua language
+brew "lua-language-server"
+# Visual testing tool for MCP servers
+brew "mcp-inspector"
+# NCurses Disk Usage
+brew "ncdu"
+# Ambitious Vim-fork focused on extensibility and agility
+brew "neovim"
+# Port scanning utility for large networks
+brew "nmap"
+# Drop-in replacement for Terraform. Infrastructure as Code Tool
+brew "opentofu"
+# General-purpose scripting language
+brew "php"
+# Fast, disk space efficient package manager
+brew "pnpm"
+# Generic machine emulator and virtualizer
+brew "qemu"
+# Rsync for cloud storage
+brew "rclone"
+# Search tool like grep and The Silver Searcher
+brew "ripgrep"
+# Powerful, clean, object-oriented scripting language
+brew "ruby"
+# Safe, concurrent, practical language
+brew "rust"
+# Scan for misconfigured S3 buckets across S3-compatible APIs!
+brew "s3scanner"
+# Autoformat shell script source code
+brew "shfmt"
+# SOcket CAT: netcat on steroids
+brew "socat"
+# Penetration testing for SQL injection and database servers
+brew "sqlmap"
+# Manage dotfiles across diverse machines
+brew "chezmoi"
+# Free software distribution for the TeX typesetting system
+brew "texlive"
+# High-performance, platform-neutral implementation of VNC
+brew "tiger-vnc"
+# Terminal multiplexer
+brew "tmux"
+# Language Server Protocol implementation for TypeScript wrapping tsserver
+brew "typescript-language-server"
+# Extremely fast Python package installer and resolver, written in Rust
+brew "uv"
+# Sends magic packets to wake up network-devices
+brew "wakeonlan"
+# Executes a program periodically, showing output fullscreen
+brew "watch"
+# Internet file retriever
+brew "wget"
+# Tools for the WireGuard secure network tunnel
+brew "wireguard-tools"
+# JavaScript package manager
+brew "yarn"
+# The AI coding agent built for the terminal.
+brew "anomalyco/tap/opencode"
+# Packer
+brew "hashicorp/tap/packer"
+# Modern TUI for managing Homebrew packages and casks on macOS and Linux
+brew "valkyrie00/bbrew/bbrew"
+
+uv "python-lsp-server"

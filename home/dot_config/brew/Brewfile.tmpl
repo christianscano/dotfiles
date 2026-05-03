@@ -1,0 +1,7 @@
+{{- if eq .chezmoi.os "darwin" -}}
+{{ include ".chezmoitemplates/brew/Brewfile.darwin" }}
+{{- else if eq .chezmoi.os "linux" -}}
+{{ include ".chezmoitemplates/brew/Brewfile.linux" }}
+{{- else -}}
+# Unsupported OS: {{ .chezmoi.os }}
+{{- end }}

@@ -1,0 +1,8 @@
+{{- $name := promptStringOnce . "name" "Full name" -}}
+{{- $email := promptStringOnce . "email" "Email address" -}}
+{{- $editor := promptChoiceOnce . "editor" "Default editor" (list "nvim" "vim" "code --wait") -}}
+
+[data]
+name = {{ $name | quote }}
+email = {{ $email | quote }}
+editor = {{ $editor | quote }}

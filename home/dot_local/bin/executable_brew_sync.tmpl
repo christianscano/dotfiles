@@ -1,0 +1,25 @@
+#!/bin/sh
+set -eu
+
+source_dir={{ .chezmoi.sourceDir | quote }}
+{{- if eq .chezmoi.os "darwin" }}
+brewfile="${source_dir}/.chezmoitemplates/brew/Brewfile.darwin"
+{{- else if eq .chezmoi.os "linux" }}
+brewfile="${source_dir}/.chezmoitemplates/brew/Brewfile.linux"
+{{- else }}
+echo "Unsupported OS: {{ .chezmoi.os }}" >&2
+exit 1
+{{- end }}
+
+if ! command -v brew >/dev/null 2>&1; then
+	echo "brew not found in PATH" >&2
+	exit 1
+fi
+
+echo "[brew_sync] Updating $brewfile"
+brew bundle dump --file="$brewfile" --force --describe
+
+echo "[brew_sync] Applying Brewfile targets"
+chezmoi --source "$source_dir" apply "$HOME/.config/brew/Brewfile"
+
+echo "[brew_sync] Done"

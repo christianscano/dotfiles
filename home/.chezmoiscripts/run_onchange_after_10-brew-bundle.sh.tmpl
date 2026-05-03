@@ -1,0 +1,18 @@
+#!/bin/sh
+# Rendered Brewfile hash: {{ include "dot_config/brew/Brewfile.tmpl" | sha256sum }}
+
+set -u
+
+if ! command -v brew >/dev/null 2>&1; then
+	echo "[chezmoi] Homebrew not found; skipping brew bundle" >&2
+	exit 0
+fi
+
+brewfile="$HOME/.config/brew/Brewfile"
+
+echo "[chezmoi] Running brew bundle"
+
+if ! brew bundle --file="$brewfile" --no-upgrade; then
+	echo "[chezmoi] brew bundle failed; rerun manually with: brew bundle --file=~/.config/brew/Brewfile --verbose" >&2
+	exit 0
+fi

@@ -1,0 +1,21 @@
+# Aliases and custom commands
+
+# ----------
+# Commands
+# ----------
+
+alias ls='eza -l --icons always'
+# alias ls='eza -1 --icons always'
+alias ll='eza -la --icons always'
+alias lt='eza -a --tree --level=2 --icons always'
+alias cm='chezmoi --source "{{ .chezmoi.workingTree | default .chezmoi.sourceDir }}"'
+{{- if eq .chezmoi.os "darwin" }}
+alias ss='lsof -iTCP -sTCP:LISTEN -n -P'
+alias yabai_update='echo "$(whoami) ALL=(root) NOPASSWD: sha256:$(shasum -a 256 $(which yabai) | cut -d " " -f 1) $(which yabai) --load-sa" | sudo tee /private/etc/sudoers.d/yabai'
+{{- end }}
+
+# --------
+# Folders
+# --------
+
+alias phd='cd $HOME/University/phd/projects'

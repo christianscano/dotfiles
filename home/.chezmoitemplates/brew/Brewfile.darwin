@@ -1,16 +1,15 @@
 tap "anomalyco/tap"
-tap "hashicorp/tap"
-tap "valkyrie00/bbrew"
 tap "asmvik/formulae"
 tap "felixkratz/formulae"
 tap "gromgit/fuse"
+tap "hashicorp/tap"
 tap "koekeishiya/formulae"
 tap "messense/macos-cross-toolchains"
 tap "nikitabobko/tap"
 tap "playcover/playcover"
 tap "rokartur/betteraudio"
 tap "tw93/tap"
-
+tap "valkyrie00/bbrew"
 # Swiss-army knife for Android testing and development
 brew "adb-enhanced"
 # Automate deployment, configuration, and upgrading
@@ -31,6 +30,8 @@ brew "node"
 brew "bitwarden-cli"
 # Get/set bluetooth power and discoverable state
 brew "blueutil"
+# Manage your dotfiles across multiple diverse machines, securely
+brew "chezmoi"
 # Cross-platform make
 brew "cmake"
 # Get a file from an HTTP, HTTPS or FTP server
@@ -129,8 +130,8 @@ brew "shfmt"
 brew "socat"
 # Penetration testing for SQL injection and database servers
 brew "sqlmap"
-# Manage dotfiles across diverse machines
-brew "chezmoi"
+# Organize software neatly under a single directory tree (e.g. /usr/local)
+brew "stow"
 # Change macOS audio source from the command-line
 brew "switchaudio-osx"
 # Free software distribution for the TeX typesetting system
@@ -171,7 +172,6 @@ brew "messense/macos-cross-toolchains/aarch64-unknown-linux-gnu"
 brew "tw93/tap/mole"
 # Modern TUI for managing Homebrew packages and casks on macOS and Linux
 brew "valkyrie00/bbrew/bbrew"
-
 # Android SDK component
 cask "android-platform-tools"
 # Master your Mac's audio with per-app volume control and precise device management
@@ -243,7 +243,6 @@ cask "visual-studio-code"
 cask "vlc"
 # Network protocol analyzer
 cask "wireshark-app"
-
 mas "Amphetamine", id: 937984704
 mas "Blackmagic Disk Speed Test", id: 425264550
 mas "Goodnotes", id: 1444383602
@@ -255,7 +254,6 @@ mas "Todoist", id: 585829637
 mas "WhatsApp", id: 310633997
 mas "Windows App", id: 1295203466
 mas "WireGuard", id: 1451685025
-
 vscode "antfu.slidev"
 vscode "antfu.unocss"
 vscode "aykutsarac.jsoncrack-vscode"
@@ -310,5 +308,4 @@ vscode "tomoki1207.pdf"
 vscode "wayou.vscode-todo-highlight"
 vscode "wscats.cors-browser"
 vscode "zoellner.openapi-preview"
-
 uv "python-lsp-server"

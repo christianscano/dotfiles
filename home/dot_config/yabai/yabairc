@@ -63,7 +63,7 @@ yabai -m rule --add app="^Notion$" space=docs
 yabai -m rule --add app="^Firefox$" space=browsers
 
 # grid=<rows>:<cols>:<start-x>:<start-y>:<width>:<height>
-yabai -m rule --add app="^Spotify$" scratchpad=spotify grid=11:11:1:1:9:9
+yabai -m rule --add app="^Kaset$" scratchpad=music grid=11:11:1:1:9:9
 yabai -m rule --add app="^Ghostty$" scratchpad=terminal grid=100:100:1:1:98:98
 
 # Apply rules to existing windows

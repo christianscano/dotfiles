@@ -357,6 +357,8 @@ bind-key -n C-Right select-pane -R
 bind-key -n C-Down  select-pane -D
 bind-key -n C-Up    select-pane -U
 
+set -g extended-keys on
+
 # if you don't want Oh my tmux! to alter a binding, use #!important
 # bind c new-window -c '#{pane_current_path}' #!important
 

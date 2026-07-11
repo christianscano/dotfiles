@@ -119,7 +119,7 @@ alt + ctrl - 9 : yabai -m space --move 9
 # Apps
 # -----
 
-cmd + shift - s : yabai -m window --toggle spotify || open -a Spotify
+cmd + shift - s : yabai -m window --toggle music || open -a Kaset
 cmd + shift - t : yabai -m window --toggle terminal || open -a Ghostty
 
 

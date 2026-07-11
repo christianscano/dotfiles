@@ -1,19 +1,23 @@
+tap "aeroxy/tap"
 tap "anomalyco/tap"
-tap "asmvik/formulae"
-tap "felixkratz/formulae"
+tap "asmvik/formulae", trusted: { formulae: ["skhd"] }
+tap "felixkratz/formulae", "https://github.com/FelixKratz/homebrew-formulae"
 tap "gromgit/fuse"
 tap "hashicorp/tap"
-tap "koekeishiya/formulae"
+tap "koekeishiya/formulae", "https://github.com/asmvik/homebrew-formulae.git"
 tap "messense/macos-cross-toolchains"
-tap "nikitabobko/tap"
+tap "nikitabobko/tap", trusted: true
 tap "playcover/playcover"
 tap "rokartur/betteraudio"
+tap "sozercan/repo"
 tap "tw93/tap"
-tap "valkyrie00/bbrew"
+tap "valkyrie00/bbrew", "https://github.com/Valkyrie00/homebrew-bbrew"
 # Swiss-army knife for Android testing and development
 brew "adb-enhanced"
 # Automate deployment, configuration, and upgrading
 brew "ansible"
+# Checks ansible playbooks for practices and behaviour
+brew "ansible-lint"
 # Plugin manager for zsh, inspired by antigen and antibody
 brew "antidote"
 # Development kit for the Java programming language
@@ -24,14 +28,20 @@ brew "apktool"
 brew "asitop"
 # Official Amazon AWS command-line interface
 brew "awscli"
+# Searches a binary image for embedded files and executable code
+brew "binwalk"
 # Open-source, cross-platform JavaScript runtime environment
 brew "node"
 # Secure and free password manager for all of your devices
 brew "bitwarden-cli"
 # Get/set bluetooth power and discoverable state
 brew "blueutil"
+# Incredibly fast JavaScript runtime, bundler, test runner, and package manager
+brew "bun"
 # Manage your dotfiles across multiple diverse machines, securely
 brew "chezmoi"
+# Cloudflare Tunnel client (formerly Argo Tunnel)
+brew "cloudflared"
 # Cross-platform make
 brew "cmake"
 # Get a file from an HTTP, HTTPS or FTP server
@@ -60,6 +70,10 @@ brew "gcc"
 brew "gh"
 # Interpreter for PostScript and PDF
 brew "ghostscript"
+# GNU version of the tar archiving utility
+brew "gnu-tar"
+# Open source programming language to build simple/reliable/efficient software
+brew "go"
 # Graph visualization software from AT&T and Bell Labs
 brew "graphviz"
 # GNU grep, egrep and fgrep
@@ -72,6 +86,8 @@ brew "hadolint"
 brew "helix"
 # Tool to report network interface bandwidth
 brew "ifstat"
+# CLI client for interacting with Incus
+brew "incus"
 # Update of iperf: measures TCP, UDP, and SCTP bandwidth
 brew "iperf3"
 # CLI wrapper for basic network utilities on macOS - ip command
@@ -119,7 +135,7 @@ brew "rclone"
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
 # Powerful, clean, object-oriented scripting language
-brew "ruby"
+brew "ruby", link: false
 # Safe, concurrent, practical language
 brew "rust"
 # Scan for misconfigured S3 buckets across S3-compatible APIs!
@@ -154,32 +170,40 @@ brew "wget"
 brew "wireguard-tools"
 # JavaScript package manager
 brew "yarn"
+# Chrome DevTools Protocol CLI — auto-connects to existing Chrome
+brew "aeroxy/tap/chrome-devtools", trusted: true
 # The AI coding agent built for the terminal.
-brew "anomalyco/tap/opencode"
+brew "anomalyco/tap/opencode", trusted: true
 # A tiling window manager for macOS based on binary space partitioning.
-brew "asmvik/formulae/yabai"
+brew "asmvik/formulae/yabai", trusted: true
 # A window border system for macOS
-brew "felixkratz/formulae/borders"
+brew "felixkratz/formulae/borders", trusted: true
 # Read-write NTFS driver for FUSE
-brew "gromgit/fuse/ntfs-3g-mac"
+brew "gromgit/fuse/ntfs-3g-mac", trusted: true
 # Packer
-brew "hashicorp/tap/packer"
+brew "hashicorp/tap/packer", trusted: true
 # Simple hotkey-daemon for macOS.
 brew "koekeishiya/formulae/skhd"
 # aarch64-unknown-linux-gnu Toolchain
-brew "messense/macos-cross-toolchains/aarch64-unknown-linux-gnu"
+brew "messense/macos-cross-toolchains/aarch64-unknown-linux-gnu", trusted: true
 # Comprehensive macOS cleanup and application uninstall tool
-brew "tw93/tap/mole"
+brew "tw93/tap/mole", trusted: true
 # Modern TUI for managing Homebrew packages and casks on macOS and Linux
-brew "valkyrie00/bbrew/bbrew"
+brew "valkyrie00/bbrew/bbrew", trusted: true
 # Android SDK component
 cask "android-platform-tools"
 # Master your Mac's audio with per-app volume control and precise device management
-cask "rokartur/betteraudio/betteraudio"
+cask "rokartur/betteraudio/betteraudio", trusted: true
 # Desktop password and login vault
 cask "bitwarden"
+# Open-source agentic browser
+cask "browseros"
+# Web security testing toolkit
+cask "burp-suite"
 # OpenAI's official ChatGPT desktop app
 cask "chatgpt"
+# OpenAI's official browser with ChatGPT built in
+cask "chatgpt-atlas"
 # Terminal-based AI coding assistant
 cask "claude-code"
 # Server and cloud storage browser
@@ -197,6 +221,8 @@ cask "ghidra"
 cask "ghostty"
 # Web browser
 cask "google-chrome"
+# Native YouTube Music client
+cask "sozercan/repo/kaset", trusted: true
 # Software for Logitech devices
 cask "logi-options+"
 # File system integration
@@ -217,8 +243,6 @@ cask "openinterminal"
 cask "openmtp"
 # Utility to uninstall apps and remove leftover files from old/uninstalled apps
 cask "pearcleaner"
-# Sideload iOS apps and games
-cask "playcover/playcover/playcover-community"
 # Collaboration platform for API development
 cask "postman"
 # VPN client focusing on security
@@ -246,6 +270,7 @@ cask "wireshark-app"
 mas "Amphetamine", id: 937984704
 mas "Blackmagic Disk Speed Test", id: 425264550
 mas "Goodnotes", id: 1444383602
+mas "Kindle", id: 302584613
 mas "Microsoft Excel", id: 462058435
 mas "Microsoft PowerPoint", id: 462062816
 mas "Microsoft Word", id: 462054704
@@ -266,13 +291,17 @@ vscode "editorconfig.editorconfig"
 vscode "esbenp.prettier-vscode"
 vscode "exiasr.hadolint"
 vscode "fill-labs.dependi"
+vscode "gabor.jsonl-gazelle"
 vscode "github.codespaces"
+vscode "golang.go"
 vscode "gruntfuggly.todo-tree"
+vscode "hashicorp.terraform"
 vscode "james-yu.latex-workshop"
 vscode "mads-hartmann.bash-ide-vscode"
 vscode "mechatroner.rainbow-csv"
 vscode "mhutchie.git-graph"
 vscode "mkhl.shfmt"
+vscode "mohsen1.prettify-json"
 vscode "ms-azuretools.vscode-containers"
 vscode "ms-azuretools.vscode-docker"
 vscode "ms-ceintl.vscode-language-pack-it"
@@ -298,6 +327,7 @@ vscode "ms-vscode.remote-server"
 vscode "ms-vsliveshare.vsliveshare"
 vscode "nstechbytes.html-view"
 vscode "pkief.material-icon-theme"
+vscode "redhat.ansible"
 vscode "redhat.vscode-yaml"
 vscode "rust-lang.rust-analyzer"
 vscode "shardulm94.trailing-spaces"
@@ -308,4 +338,7 @@ vscode "tomoki1207.pdf"
 vscode "wayou.vscode-todo-highlight"
 vscode "wscats.cors-browser"
 vscode "zoellner.openapi-preview"
+go "golang.org/x/tools/gopls"
+cargo "h3i"
 uv "python-lsp-server"
+uv "ruff"

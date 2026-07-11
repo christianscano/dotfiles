@@ -1,44 +1,65 @@
-# dotfiles
+# Dotfiles
 
-Dotfile gestiti con [chezmoi](https://www.chezmoi.io/).
+Personal macOS and Linux configuration, managed with [chezmoi](https://www.chezmoi.io/). The repository configures Zsh, Homebrew packages, Docker completions, and supporting command-line tools.
 
-## Layout
+## Quick start
 
-- `.chezmoiroot` punta a `home/`, quindi solo `home/` viene usata come source state.
-- `home/dot_zshenv` diventa `~/.zshenv`.
-- `home/dot_config/zsh/dot_zshrc.tmpl` diventa `~/.config/zsh/.zshrc`.
-- `home/dot_config/brew/Brewfile.tmpl` genera `~/.config/brew/Brewfile` includendo il Brewfile corretto per OS.
-- `home/.chezmoitemplates/brew/Brewfile.darwin` contiene i pacchetti Homebrew per macOS.
-- `home/.chezmoitemplates/brew/Brewfile.linux` contiene i pacchetti Homebrew per Linux.
-- `home/remove_dot_Brewfile` rimuove il vecchio `~/.Brewfile`.
-- `home/dot_local/bin/executable_brew_sync.tmpl` diventa `~/.local/bin/brew_sync`.
-- `home/.chezmoiscripts/run_after_30-docker-completions.sh.tmpl` genera le completion Docker in `~/.config/zsh/completions/_docker` se Docker è installato.
-- `home/.chezmoiscripts/` contiene script eseguiti da `chezmoi apply`.
-
-## Installazione
+Clone the repository wherever you want to keep it, then run the installer from its root:
 
 ```sh
 ./install.sh
 ```
 
-Su macOS e Linux i pacchetti passano da Homebrew. Su macOS sono supportati solo Apple Silicon e `/opt/homebrew`.
+The script uses the directory containing `install.sh` as the chezmoi source directory. It does not create the usual `~/.local/share/chezmoi` symlink.
 
-## Comandi
+On macOS, only Apple Silicon is supported. The installer installs Xcode Command Line Tools, Homebrew, and chezmoi when needed. On Linux, Homebrew must already be installed at `/home/linuxbrew/.linuxbrew`; the script then installs chezmoi through Homebrew.
+
+### Safe modes
 
 ```sh
-chezmoi --source ~/dotfiles diff
-chezmoi --source ~/dotfiles apply
-chezmoi --source ~/dotfiles edit ~/.config/zsh/.zshrc
-chezmoi --source ~/dotfiles re-add ~/.config/zsh/.zshrc
+# Show the changes chezmoi would make
+./install.sh --check
+
+# Apply files without running chezmoi scripts
+./install.sh --config-only
+```
+
+## Daily workflow
+
+After starting a new Zsh session, use `cm` instead of typing the full chezmoi command. It is an alias for chezmoi with this repository's active working tree as the source directory.
+
+```sh
+# Review pending changes, then apply them
+cm diff
+cm apply
+
+# Edit a managed target and add the change back to this repository
+cm edit ~/.config/zsh/.zshrc
+cm re-add ~/.config/zsh/.zshrc
+```
+
+If the alias is not available, use `chezmoi --source /path/to/dotfiles` in its place.
+
+## Homebrew packages
+
+Run `brew_sync` after installing or removing packages with Homebrew:
+
+```sh
 brew_sync
 ```
 
-Per verificare senza applicare:
+It saves the current platform's package list with `brew bundle dump`, updates the generated `~/.config/brew/Brewfile`, and removes the legacy `~/.Brewfile` through chezmoi.
 
-```sh
-./install.sh --check
-```
+## How it is organized
 
-`brew_sync` aggiorna il Brewfile sorgente del sistema corrente (`Brewfile.darwin` o `Brewfile.linux`) con `brew bundle dump`, poi rigenera `~/.config/brew/Brewfile` e rimuove il vecchio `~/.Brewfile` con chezmoi.
+`.chezmoiroot` makes `home/` the source state, so chezmoi only manages files below that directory.
 
-`install.sh` usa sempre `--source ~/dotfiles`; non viene creato un symlink in `~/.local/share/chezmoi`.
+| Area | Purpose |
+| --- | --- |
+| `home/dot_zshenv` | Becomes `~/.zshenv`. |
+| `home/dot_config/zsh/` | Zsh configuration, including the `cm` alias. |
+| `home/dot_config/brew/Brewfile.tmpl` | Generates the Brewfile for the current operating system. |
+| `home/.chezmoitemplates/brew/` | Platform-specific package manifests: `Brewfile.darwin` and `Brewfile.linux`. |
+| `home/dot_local/bin/executable_brew_sync.tmpl` | Becomes `~/.local/bin/brew_sync`. |
+| `home/.chezmoiscripts/` | Scripts executed by `chezmoi apply`, including Docker completion generation when Docker is installed. |
+| `home/remove_dot_Brewfile` | Removes the legacy `~/.Brewfile`. |
